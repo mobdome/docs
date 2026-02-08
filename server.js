@@ -1,1 +1,6 @@
-const express = require('express'); const app = express(); app.use(express.static('public')); app.listen(3001, () => console.log('Notion server on 3001'));
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 3001;
+app.use(express.static('public'));
+app.get('/', (req, res) => res.send('Mobdome Docs MVP'));
+app.listen(port, () => console.log('Docs running on ' + port));
