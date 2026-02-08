@@ -1,1 +1,67 @@
-<h1>Mobdome Docs</h1>
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Mobdome Docs | Notion to Word</title>
+    <style>
+        :root { --bg: #0f1115; --text: #e0e6ed; --text-muted: #9ca3af; --accent: #3b82f6; --accent-hover: #2563eb; --card: #1f2937; --border: #374151; }
+        body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; line-height: 1.6; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 25px 0; border-bottom: 1px solid var(--border); margin-bottom: 50px; }
+        .logo { font-size: 1.5rem; font-weight: 800; letter-spacing: -1px; text-decoration: none; color: var(--text); }
+        .logo span { color: var(--accent); }
+        .back-link { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+        .back-link:hover { color: var(--text); }
+        .hero { text-align: center; padding: 40px 0 60px; }
+        h1 { font-size: 3.5rem; margin: 0 0 20px 0; line-height: 1.1; letter-spacing: -1px; font-weight: 800; }
+        .hero h1 span { background: linear-gradient(to right, #3b82f6, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .lead { font-size: 1.3rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 40px; line-height: 1.5; }
+        .input-box { background: var(--card); padding: 40px; border-radius: 16px; border: 1px dashed var(--border); text-align: center; max-width: 550px; margin: 0 auto; transition: border-color 0.2s; cursor: pointer; }
+        .input-box:hover { border-color: var(--accent); background: rgba(59, 130, 246, 0.05); }
+        .upload-icon { font-size: 3rem; margin-bottom: 20px; display: block; }
+        .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 80px; }
+        .step-card { background: var(--card); padding: 30px; border-radius: 16px; border: 1px solid var(--border); }
+        .step-num { font-size: 3rem; color: var(--border); font-weight: 800; line-height: 1; margin-bottom: 10px; }
+        .step-card h3 { margin: 10px 0; color: #fff; }
+        .pricing { background: linear-gradient(145deg, #1f2937, #111827); padding: 50px; margin-top: 80px; text-align: center; border-radius: 24px; border: 1px solid var(--border); }
+        .price-tag { font-size: 3.5rem; font-weight: 800; color: #fff; margin: 10px 0; }
+        .btn-primary { background: linear-gradient(to bottom, #3b82f6, #2563eb); color: white; border: none; padding: 16px 40px; border-radius: 10px; font-size: 1.1rem; font-weight: 700; cursor: pointer; text-shadow: 0 1px 2px rgba(0,0,0,0.2); }
+        footer { margin-top: 100px; border-top: 1px solid var(--border); padding: 40px 0; color: var(--text-muted); font-size: 0.9rem; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/" class="logo">Mob<span>dome</span></a>
+            <a href="/" class="back-link">&larr; Back to Suite</a>
+        </nav>
+
+        <div class="hero">
+            <h1>Notion Pages to<br><span>Perfect Word Docs.</span></h1>
+            <p class="lead">Stop spending hours fixing broken formatting. Convert Notion exports to professional MS Word documents instantly.</p>
+            
+            <div class="input-box" onclick="alert('Demo: Upload functionality coming soon.')">
+                <span class="upload-icon">📄</span>
+                <strong>Drop Notion HTML Export Here</strong>
+                <p style="font-size: 0.9rem; color: var(--text-muted);">or click to browse files</p>
+            </div>
+        </div>
+
+        <div class="steps">
+            <div class="step-card"><div class="step-num">01</div><h3>Export</h3><p>Export your Notion page as HTML.</p></div>
+            <div class="step-card"><div class="step-num">02</div><h3>Convert</h3><p>We process styles, tables, and images.</p></div>
+            <div class="step-card"><div class="step-num">03</div><h3>Download</h3><p>Get a clean .docx file ready for clients.</p></div>
+        </div>
+
+        <div class="pricing">
+            <h2>Start Converting</h2>
+            <div class="price-tag">.00</div>
+            <p style="color: var(--text-muted); margin-bottom: 30px;">Per month. Unlimited documents.</p>
+            <button class="btn-primary" onclick="alert('Opening Stripe Checkout...')">Subscribe Now</button>
+        </div>
+
+        <footer>&copy; 2026 Mobdome Labs.</footer>
+    </div>
+</body>
+</html>
