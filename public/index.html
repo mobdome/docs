@@ -41,12 +41,36 @@
             <h1>Notion Pages to<br><span>Perfect Word Docs.</span></h1>
             <p class="lead">Stop spending hours fixing broken formatting. Convert Notion exports to professional MS Word documents instantly.</p>
             
-            <div class="input-box" onclick="alert('Demo: Upload functionality coming soon.')">
+            <div class="input-box" onclick="document.getElementById('fileInput').click()">
                 <span class="upload-icon">📄</span>
                 <strong>Drop Notion HTML Export Here</strong>
                 <p style="font-size: 0.9rem; color: var(--text-muted);">or click to browse files</p>
+                <input type="file" id="fileInput" style="display: none;" onchange="handleUpload(this.files)">
             </div>
         </div>
+
+        <script>
+            async function handleUpload(files) {
+                if (files.length === 0) return;
+                const formData = new FormData();
+                formData.append('file', files[0]);
+
+                try {
+                    const response = await fetch('/upload', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    if (response.ok) {
+                        alert('Upload successful!');
+                    } else {
+                        alert('Upload failed.');
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    alert('Upload error.');
+                }
+            }
+        </script>
 
         <div class="steps">
             <div class="step-card"><div class="step-num">01</div><h3>Export</h3><p>Export your Notion page as HTML.</p></div>
@@ -56,7 +80,7 @@
 
         <div class="pricing">
             <h2>Start Converting</h2>
-            <div class="price-tag">.00</div>
+            <div class="price-tag">$9.00</div>
             <p style="color: var(--text-muted); margin-bottom: 30px;">Per month. Unlimited documents.</p>
             <button class="btn-primary" onclick="alert('Opening Stripe Checkout...')">Subscribe Now</button>
         </div>
